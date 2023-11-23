@@ -22,6 +22,7 @@ header ul{
     display:flex;
     flex-flow:row wrap;
     align-items: flex-end;
+    /* padding: 10px; */
     
 }
 header a{
@@ -34,11 +35,13 @@ header li:nth-child(3){
 }
 header li{
     
-    padding:10px 20px 3px 20px;
+    padding:10px 20px 10px 20px;
+    float:right;
     margin-right:20px;
     background-color:bisque;
     list-style: none;
     align-items: baseline;
+    border-radius: 20px;
 
 }
 
@@ -49,7 +52,7 @@ header li{
 .bio {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top:5%;
     flex: 1 1 auto;
@@ -57,18 +60,16 @@ header li{
     
     
 }
-.bio h2{
-    background-color: red;
-    padding: 30px;
-    margin-right: 75%
-
-}
 .bio p{
     position: relative;
     bottom: 20%;
-    margin-left: 50%;
     background-color: green;
     padding: 30px;
+}
+
+.projects{
+    display:flex;
+    flex-wrap: wrap;
 
 }
 
