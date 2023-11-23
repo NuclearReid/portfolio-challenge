@@ -1,161 +1,75 @@
 *{
-    font-family: sans-serif;
     margin: 0;
-    
-    
 }
+
+
 header{
     display:flex;
-    flex-flow:row wrap;
-    background-color: aquamarine;
-    justify-content: space-between;
-    float: right;
-    flex: 1 1 50px;
-    padding: 20px 0px 10px 20px;
-    width: 100%;
-    height: 10vh;
-}
-header h1{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: lightcoral;
-    padding:10px 10px 3px 10px;
-    height: 30px;
-    align-content: center;
+    background-color: blueviolet;
 }
 
-header ul{
+.name{
     display:flex;
-    flex-flow:row wrap;
-    align-items: flex-end;
-    float: right;
-    flex: 2 2 50px;
-    min-width: 300px;
-    max-width: 500px;
-    position: absolute;
-    right: 20px;
-    padding: 10px;
-    
+    flex-flow: wrap;
+    justify-content: flex-start;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 20px;
+    flex: 1 1 300px;
+}
+.name h1{
+    background-color: bisque;
 }
 
-header li{
+main{
     display:flex;
-    padding:10px 20px 10px 20px;
-    float: right;
-    flex: 1 1 auto;
-    background-color:bisque;
-    list-style: none;
-    align-items: flex-end;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-header a{
-    display:flex;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
-
-header li:hover{
-    background-color: red;
-    
+    flex-flow: column wrap;
 }
 
 .bio{
-    padding: 20px;
+    display:flex;
+    flex-flow:row wrap;
+    width: 75%;
+}
+#me{
+    justify-content: flex-start;
+    margin-left: 10%;
+}
+#aboutMe{
+    margin-left:45%;
+}
+.tiny{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-end;
+    margin-top:4%;
+}
+.tiny a{
+    text-decoration: none;
+    background-color: lightgoldenrodyellow;
+    color:black;
+    padding:10px;
 }
 
-.bio {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top:5%;
-    flex: 1 1 auto;
-    position: relative;
-    margin: 0;
-    
-}
-.bio p{
-    position: relative;
-    bottom: 20%;
-    background-color: green;
-    padding: 30px;
-}
 
-.projects{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    width: 90%;
-    height: 90vh;
-    margin: 0 auto;
-
-}
-
-.bigcard{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    flex: 1 1 200px;
-    width: 100%;
-    height: 30vh;
-    margin: 0 auto;
-    border-radius: 40% 0% / 100% 0%;
-}
-
-.smallcards{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    width: 90%;
-    height: 60vh;
-    flex: content;
-}
-
-.prj-1{
-    padding: 10px;
-    width: 250px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    transition:transform 1s;
-    background-color: lightcyan;
-}
-
-.prj-1:hover{
-    transform:scale(200%)
-}
-
-.prj {
+.box{
     display:flex;
     flex-flow: row wrap;
-    float:inline-start;
-    background-color: lightblue;
-    justify-content: center;
-    flex: 0 1 35%;
-    border: 3px solid black;
-    transition: transform 0.5s;
     margin: 10px;
-    padding: 10px;
+    justify-content: center;
+}
+.box1 {
+    flex-direction: column wrap;
+    margin-left: 50%;
+    margin-right: 50%;
 }
 
-
-.prj:nth-child(1):hover{
-    transform: rotate(5deg);
-}
-.prj:nth-child(2):hover{
-    transform: translate(0, -10px);
-}
-.prj:nth-child(3):hover{
-    transform: rotate(-5deg);
+.box section{
+    height: 100px;
+    width: 100px;
+    margin: 1%;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
 }
 
-.prj-1 h3,
-.prj-2 h3,
-.prj-3 h3,
-.prj-4 h3{
-    margin-right:15px;
-}
