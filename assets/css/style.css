@@ -1,75 +1,10 @@
 *{
-    margin: 0;
+    margin:0;
 }
-
 
 header{
-    display:flex;
-    background-color: blueviolet;
+    display: flex;
+    flex-flow:wrap row;
+    border:2px solid black;
+    padding: 2%;
 }
-
-.name{
-    display:flex;
-    flex-flow: wrap;
-    justify-content: flex-start;
-    margin-top: 2%;
-    margin-left: 3%;
-    padding: 20px;
-    flex: 1 1 300px;
-}
-.name h1{
-    background-color: bisque;
-}
-
-main{
-    display:flex;
-    flex-flow: column wrap;
-}
-
-.bio{
-    display:flex;
-    flex-flow:row wrap;
-    width: 75%;
-}
-#me{
-    justify-content: flex-start;
-    margin-left: 10%;
-}
-#aboutMe{
-    margin-left:45%;
-}
-.tiny{
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: flex-end;
-    margin-top:4%;
-}
-.tiny a{
-    text-decoration: none;
-    background-color: lightgoldenrodyellow;
-    color:black;
-    padding:10px;
-}
-
-
-.box{
-    display:flex;
-    flex-flow: row wrap;
-    margin: 10px;
-    justify-content: center;
-}
-.box1 {
-    flex-direction: column wrap;
-    margin-left: 50%;
-    margin-right: 50%;
-}
-
-.box section{
-    height: 100px;
-    width: 100px;
-    margin: 1%;
-    align-items: center;
-    justify-content: center;
-    background-color: blue;
-}
-
