@@ -3,6 +3,7 @@
     --height-tot-box-2: 40rem;
     --height-tot-box-3: 20rem;
 
+    /* I want to use this but i'm not sure why i can't? */
     --responsive-small-res: 540px;
     
 }
@@ -14,7 +15,7 @@ a{
     text-decoration: none;
 }
 
-
+/* The header of the webpage */
 header{
     display:flex;
     /* background-color: blueviolet; */
@@ -42,6 +43,7 @@ header{
     font-size: 2rem;;
     
 }
+/* the links in the header to the sections of the page */
 .tiny{
     display:flex;
     flex-flow:row wrap;
@@ -66,39 +68,21 @@ header{
 }
 
 
-main{
-    display:flex;
-    flex-flow: column wrap;
-}
 
-.total-box{
-    display: flex;
-    flex-flow:column nowrap;
-    border: 2px solid limegreen;
-    flex: 1;
-}
-
-.total-box article{
-    display: flex;
-    flex-flow:row wrap;
-    border: 2px solid darkgoldenrod;
-    margin: 1% 0% 2% 0%;
-    
-}
 
 /* Header responve actions */
 
 @media screen and (max-width: 540px ){
     header{
         background-color: pink;
-        
         height: fit-content;
-        width: 100%;
+        width: 100vw;
+       
     }
 
-.header-box{
-    flex-flow: column wrap;
-}
+    .header-box{
+        flex-flow: column wrap;
+    }
 
     .name{
         display: flex;
@@ -137,15 +121,33 @@ main{
     
 }
 
+/* This area controls the 3 boxes that the bio, main project, and small project are in */
+main{
+    display:flex;
+    flex-flow: column wrap;
+}
 
+.total-box{
+    display: flex;
+    flex-flow:column nowrap;
+    border: 2px solid limegreen;
+    flex: 1;
+}
 
+.total-box article{
+    display: flex;
+    flex-flow:row wrap;
+    border: 2px solid darkgoldenrod;
+    margin: 1% 0% 2% 0%;
+    
+}
 
 
 /* the box heights for each section (bio, main project, side projects) */
 
-.total-box article:first-child{
+.total-box article:nth-child(1){
     height:var(--height-tot-box-1);
-    width: 88%;
+    width: 99%;
 }
 
 .total-box article:nth-child(2){
@@ -158,12 +160,16 @@ main{
     width: 99%;
 }
 
+
 /* The bio section */
 .bio {
     
-    padding: 5rem;
+   
     justify-content: space-between;
     align-items: center;
+    
+    /* With padding, my bio section is responsive but breaks the rest of the page */
+    /* padding: 5rem; */
     
     
     
@@ -195,12 +201,14 @@ main{
 
 
 
-/* Header Changing responsivness with resolution */
+/* The Bio Section Changing responsivness with resolution */
 
 @media screen and (max-width: 540px){
     .bio{
         background-color: brown;
-        flex-flow:column wrap
+        flex-flow:column wrap;
+        height: 45rem;
+        width: 100vw;
     }
     #me{
         justify-content: flex-start;
@@ -223,15 +231,12 @@ main{
 
 }
 
-@media screen and (min-width:1732px){
-    /* .bio{
-        
-    } */
-}
 
+
+/* ------------------------------------------------------------------------------ */
 /* the overall page kinda breaks if the resolution goes past 1732px */
-
-
+ /* This has been fixed by changing the .total-box from 'flex:column rap' to 'flex:column nowrap' */
+/* ------------------------------------------------------------------------------ */
 
 
 /* the main(big) project */
@@ -268,18 +273,32 @@ main{
     border: 2px solid blue;
 }
 
-/* The other projects, smaller boxes */
+
+/* Work at sizing with responsivness... just make it more pretty */
+
+
+
+
+
+
+
+/* Add in interactions with the main prj here */
+
+
+
 
 
 
 /* --------------Not sure what this was doing--------------- */
-/* .other-prj-box{
+.other-prj-box{
     display:flex;
     margin: 1rem 2rem 1rem 2rem;
     flex-flow:row wrap;
-} */
+}
 /* -------------------------------------------------------- */
 
+
+/* The other projects, smaller boxes */
 .other-prj-box div{
     display:flex;
     flex-flow: row wrap;
@@ -310,7 +329,7 @@ main{
 }
 
 
-/* the different interactions with the boxes */
+/* the different interactions with the small project boxes */
 
 .prj-boxs section:hover{
     background-color: aquamarine;
