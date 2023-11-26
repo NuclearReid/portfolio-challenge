@@ -1,3 +1,11 @@
+:root{
+    --height-tot-box-1: 10rem;
+    --height-tot-box-2: 40rem;
+    --height-tot-box-3: 20rem;
+    
+    
+}
+
 *{
     margin: 0;
 }
@@ -10,7 +18,13 @@ header{
     display:flex;
     background-color: blueviolet;
 }
-
+.header-box{
+    display: flex;
+    flex-flow:row wrap;
+    width: 100%;
+    border: 2px solid aquamarine;
+    justify-content: space-between;
+}
 .name{
     display:flex;
     flex-flow: wrap;
@@ -22,12 +36,23 @@ header{
 }
 .name h1{
     background-color: bisque;
+    
 }
 .tiny{
     display:flex;
     flex-flow:row wrap;
     justify-content: flex-end;
-    margin-top:4%;
+    margin:4% 2% 0 0;
+    
+}
+
+.tiny section{
+    display:flex;
+}
+
+.tiny nav{
+    display: flex;
+
 }
 .tiny a{
     background-color: lightgoldenrodyellow;
@@ -41,48 +66,261 @@ main{
     flex-flow: column wrap;
 }
 
-.bio{
-    display:flex;
+.total-box{
+    display: flex;
+    flex-flow:column wrap;
+    border: 2px solid limegreen;
+}
+
+.total-box article{
+    display: flex;
     flex-flow:row wrap;
-    width: 75%;
+    border: 2px solid darkgoldenrod;
+    margin: 1% 0% 2% 0%;
+    
+}
+
+/* Header responve actions */
+
+@media screen and (max-width: 540px){
+    header{
+        background-color: pink;
+        
+        height: fit-content;
+        width: 100%;
+    }
+
+.header-box{
+    flex-flow: column wrap;
+}
+
+    .name{
+        display: flex;
+        padding: .5rem;
+        margin: 0 0 .5rem 0;
+        flex: 1 1 3rem;
+        justify-content: center;
+    }
+
+    .name h1{
+        font-size: 3rem;
+    }
+
+    
+    .name section{
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        height: fit-content;
+        
+    }
+    .name h1{
+        justify-content: flex-start;
+        height:fit-content;
+        
+    }
+    .tiny{
+        padding: 0px;
+        margin: 0 0 1rem 0;
+        justify-content: center;
+    }
+    .tiny a{
+        font-size: 2rem;
+        margin: .5rem;
+    }
+    
+}
+
+
+
+
+
+/* the box heights for each section (bio, main project, side projects) */
+
+.total-box article:first-child{
+    height:var(--height-tot-box-1);
+}
+
+.total-box article:nth-child(2){
+    height: var(--height-tot-box-2);
+}
+
+.total-box article:nth-child(3){
+    height: var(--height-tot-box-3);
+}
+
+/* The bio section */
+.bio {
+    border: 2px solid coral;
+    padding: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bio div{
+    display: flex;
+    border: 2px solid black;
+    justify-content: flex-end;
+}
+.bio div > p {
+    margin-left: 20%;
+}
+
+.bio h2{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 #me{
-    justify-content: flex-start;
-    margin-left: 10%;
+    border: 2px solid pink;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    padding: 10px;
+    height: 2rem;
+    width: 6rem;
 }
 #aboutMe{
-    margin-left:45%;
+    display: flex;
+    border: 2px solid red;
+    width: 50%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.box{
+
+/* Header Changing responsivness with resolution */
+
+@media screen and (max-width: 512px){
+    .bio{
+        /* height: (var(--height-tot-box-1)+20vh); */
+        background-color: brown;
+        padding: 1rem;
+        
+        
+    }
+
+    .bio article{
+        
+        margin-top: 1rem;
+        flex-flow: column wrap;
+    }
+    
+
+
+
+
+
+    
+    /* #me h2{
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 5vh;
+    }
+    
+    .bio p{
+        flex-direction: column;
+        justify-content: flex-end;
+    }    */
+}
+
+/* the overall page kinda breaks if the resolution goes past 1732px */
+
+
+/* the main(big) project */
+
+.main-proj-box{
     display:flex;
     flex-flow: row wrap;
     margin: 10px;
     justify-content: center;
-}
-.box1 {
-    flex-direction: column wrap;
-    margin-left: 50%;
-    margin-right: 50%;
+    border:2px solid green;
 }
 
-.box section{
-    height: 100px;
-    width: 100px;
-    margin: 1%;
+.box1 {
+    display:flex;
+    flex-flow: row wrap;
+    margin: 1% 50% 1% 50%;
+}
+
+.box1 section{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 h3{
+    justify-content: center;
+    align-items: center;
+}
+
+.main-proj-box section{
+    height: var(--height-tot-box-1)-2rem;
+    width: 50vh;
+    margin: 0;
     align-items: center;
     justify-content: center;
-    background-color: blue;
+    border: 2px solid blue;
+}
+
+/* The other projects, smaller boxes */
+
+.other-prj-box{
+    display:flex;
+    margin: 1rem 2rem 1rem 2rem;
+    flex-flow:row wrap;
+
+}
+
+.other-prj-box div{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid yellow;
+    width:50%;
+    padding: 15px;
+    flex: 1;
+    margin: 1% 20% 1% 20%;
+
+    }
+
+
+.prj-boxs section{
+    display:flex;
+    flex-flow: row wrap;
+    width: 7vh; 
+    height: 7vh;
+    border: 2px solid violet;
+
+    padding: 10px;
+    margin: 1.75%;
+
+    
 }
 
 
-/* Work on this below! */
+/* the different interactions with the boxes */
+
+.prj-boxs section:hover{
+    background-color: aquamarine;
+
+}
+
+
+
+/* the footer */
 
 footer{
     display:flex;
     position: relative;
     right: 0px;
+    border: 2px solid magenta;
 }
 
 
