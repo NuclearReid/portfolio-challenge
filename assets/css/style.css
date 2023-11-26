@@ -206,9 +206,12 @@ main{
 @media screen and (max-width: 540px){
     .bio{
         background-color: brown;
+
+        /* ---------these aren't doing anything--------- */
         flex-flow:column wrap;
         height: 45rem;
         width: 100vw;
+        /* -------------------------------------------------- */
     }
     #me{
         justify-content: flex-start;
