@@ -3,7 +3,6 @@
     --height-tot-box-2: 40rem;
     --height-tot-box-3: 20rem;
     
-    
 }
 
 *{
@@ -16,7 +15,8 @@ a{
 
 header{
     display:flex;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    border: 2px dotted blue;
 }
 .header-box{
     display: flex;
@@ -32,17 +32,19 @@ header{
     margin-top: 2%;
     margin-left: 3%;
     padding: 20px;
-    flex: 1 1 300px;
+    flex: 1 1 200px;
 }
 .name h1{
     background-color: bisque;
+    padding: .5rem;
+    font-size: 2rem;;
     
 }
 .tiny{
     display:flex;
     flex-flow:row wrap;
     justify-content: flex-end;
-    margin:4% 2% 0 0;
+    margin:3rem 2rem .25rem 0;
     
 }
 
@@ -57,7 +59,8 @@ header{
 .tiny a{
     background-color: lightgoldenrodyellow;
     color:black;
-    padding:10px;
+    padding:10px 10px 5px 10px;
+    margin: .5rem;
 }
 
 
@@ -139,14 +142,17 @@ main{
 
 .total-box article:first-child{
     height:var(--height-tot-box-1);
+    width: 88%;
 }
 
 .total-box article:nth-child(2){
     height: var(--height-tot-box-2);
+    width: 99%;
 }
 
 .total-box article:nth-child(3){
     height: var(--height-tot-box-3);
+    width: 99%;
 }
 
 /* The bio section */
@@ -157,16 +163,10 @@ main{
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    width: 100%
 }
 
-.bio div{
-    display: flex;
-    border: 2px solid black;
-    justify-content: flex-end;
-}
-.bio div > p {
-    margin-left: 20%;
-}
+
 
 .bio h2{
     display: flex;
@@ -195,13 +195,22 @@ main{
 
 /* Header Changing responsivness with resolution */
 
-@media screen and (max-width: 512px){
+@media screen and (max-width: 525px){
     .bio{
-        /* height: (var(--height-tot-box-1)+20vh); */
         background-color: brown;
-        padding: 1rem;
-        
-        
+        flex-flow:column wrap
+    }
+    #me{
+        justify-content: flex-start;
+        position: relative;
+        bottom: 8rem;
+        left: 5rem;
+    }
+    #aboutMe{
+        justify-content: flex-start;
+        position: relative;
+        bottom: -2rem;
+        left: -9rem;
     }
 
     .bio article{
@@ -211,24 +220,11 @@ main{
     }
     
 
-
-
-
-
-    
-    /* #me h2{
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 5vh;
-    }
-    
-    .bio p{
-        flex-direction: column;
-        justify-content: flex-end;
-    }    */
 }
 
 /* the overall page kinda breaks if the resolution goes past 1732px */
+
+
 
 
 /* the main(big) project */
@@ -262,7 +258,7 @@ main{
 .main-proj-box section{
     height: var(--height-tot-box-1)-2rem;
     width: 50vh;
-    margin: 0;
+    margin: 1rem;
     align-items: center;
     justify-content: center;
     border: 2px solid blue;
