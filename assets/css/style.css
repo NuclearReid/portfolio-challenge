@@ -1,15 +1,22 @@
 :root{
     --height-tot-box-1: 10rem;
-    --height-tot-box-2: 40rem;
+    --height-tot-box-2: 25rem;
     --height-tot-box-3: 20rem;
 
     /* I want to use this but i'm not sure why i can't? */
     --responsive-small-res: 540px;
     
+    --color-whiteish: #F4F1F8;
+    --color-light-gray:#EAE3EA;
+    --color-med-gray: #AFA7B6;
+    --color-dark-gray: #5F5D72;
+    --color-dark-blue-black: #242537;
+    --color-blackish:#141414;
 }
 
 *{
     margin: 0;
+    
 }
 a{
     text-decoration: none;
@@ -20,6 +27,8 @@ header{
     display:flex;
     /* background-color: blueviolet; */
     border: 2px dotted blue;
+    background-image: url("./monkey\ temple\ triangles\ spots\ removed.jpg");
+    background-size: cover;
 }
 .header-box{
     display: flex;
@@ -38,7 +47,8 @@ header{
     flex: 1 1 200px;
 }
 .name h1{
-    background-color: bisque;
+    background-color: var(--color-whiteish);
+    border-radius: 10px;
     padding: .5rem;
     font-size: 2rem;;
     
@@ -61,7 +71,8 @@ header{
 
 }
 .tiny a{
-    background-color: lightgoldenrodyellow;
+    background-color: var(--color-whiteish);
+    border-radius: 10px;
     color:black;
     padding:10px 10px 5px 10px;
     margin: .5rem;
@@ -72,7 +83,7 @@ header{
 
 /* Header responve actions */
 
-@media screen and (max-width: 540px ){
+@media screen and (max-width: 645px ){
     header{
         background-color: pink;
         height: fit-content;
@@ -138,7 +149,7 @@ main{
     display: flex;
     flex-flow:row wrap;
     border: 2px solid darkgoldenrod;
-    margin: 1% 0% 2% 0%;
+    /* margin: 1% 0% 2% 0%; */
     
 }
 
@@ -147,17 +158,17 @@ main{
 
 .total-box article:nth-child(1){
     height:var(--height-tot-box-1);
-    width: 99%;
+    width: 100%;
 }
 
 .total-box article:nth-child(2){
     height: var(--height-tot-box-2);
-    width: 99%;
+    width: 100%;
 }
 
 .total-box article:nth-child(3){
     height: var(--height-tot-box-3);
-    width: 99%;
+    width: 100%;
 }
 
 
@@ -167,72 +178,110 @@ main{
    
     justify-content: space-between;
     align-items: center;
-    
+    background-image: linear-gradient(var(--color-light-gray), var(--color-med-gray)) ;
     /* With padding, my bio section is responsive but breaks the rest of the page */
     /* padding: 5rem; */
-    
-    
-    
 }
 
 .bio h2{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+
+    background-color: var(--color-whiteish);
+    border-radius: 10px;
 }
 
 #me{
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     align-items: center;
     justify-content: center;
     position:relative;
     padding: 10px;
     height: 2rem;
     width: 6rem;
+    margin-left: 1rem;
 }
 #aboutMe{
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 50%;
     padding: 20px;
     align-items: center;
     justify-content: center;
+    margin-right: 1rem;
+
+    background-color: var(--color-whiteish);
+    border-radius: 10px;
 }
 
 
 
 /* The Bio Section Changing responsivness with resolution */
 
-@media screen and (max-width: 540px){
-    .bio{
-        background-color: brown;
-
-        /* ---------these aren't doing anything--------- */
-        flex-flow:column wrap;
-        height: 45rem;
-        width: 100vw;
-        /* -------------------------------------------------- */
+@media screen and (max-width: 645px){
+    
+    .total-box article:nth-child(1){
+        height: 30rem;
+        flex-flow:column nowrap;
     }
+    
+    .bio{
+        display: flex;
+        /* padding: .5rem;
+        margin: 0 0 .5rem 0;
+        flex: 1 1 3rem; */
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+
+}
+
+
+  /* --------This sorta worked but not very well--------------- */
+    /* .bio{
+        background-color: brown;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    
     #me{
         justify-content: flex-start;
-        position: relative;
-        bottom: 8rem;
-        left: 5rem;
+        
+        
+        /* ------testing this out-------- */
+        /* align-items: center; */
+        /* --------------------------------- */
+
+        /* position: absolute;
+        bottom:18rem;
+        left:11rem; */
+
+        /*
+    }
+
+    #picOfMe{
+        position: absolute;
+        bottom: 10rem;
+        left: 12rem;
+        border: solid 2px black;
     }
     #aboutMe{
         justify-content: flex-start;
-        position: relative;
-        bottom: -2rem;
-        left: -9rem;
+        position: absolute;
+        top:28rem;
+        left: 8rem;
     }
 
     .bio article{
-        
         margin-top: 1rem;
         flex-flow: column wrap;
-    }
+    } */
+/* _____________________________________________________________________ */
 
-}
 
 
 
@@ -246,6 +295,7 @@ main{
 
 .main-proj-box{
     justify-content: center;
+    background-image: linear-gradient(var(--color-med-gray),var(--color-dark-gray));
     
 }
 
@@ -257,7 +307,7 @@ main{
 
 .box1 section{
     display:flex;
-    flex-flow:row wrap;
+    flex-flow:column nowrap;
     justify-content: center;
     align-items: center;
 }
@@ -272,7 +322,7 @@ main{
     width: 50vh;
     margin: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border: 2px solid blue;
 }
 
@@ -292,13 +342,16 @@ main{
 
 
 
-/* --------------Not sure what this was doing--------------- */
 .other-prj-box{
+    background-image: linear-gradient(var(--color-dark-gray),var(--color-dark-blue-black));
+
+    /* --------------Not sure what this was doing--------------- */
     display:flex;
-    margin: 1rem 2rem 1rem 2rem;
+    /* margin: 1rem 2rem 1rem 2rem; */
     flex-flow:row wrap;
+    /* -------------------------------------------------------- */
+
 }
-/* -------------------------------------------------------- */
 
 
 /* The other projects, smaller boxes */
@@ -322,13 +375,16 @@ main{
     width: 7vh; 
     height: 7vh;
     border: 2px solid violet;
-
     padding: 10px;
     margin: 1.75%;
-
     flex: 1 1 40%;
+}
 
-    
+#prj-2,
+#prj-3,
+#prj-4,
+#prj-5{
+    height: 3rem;
 }
 
 
@@ -336,8 +392,17 @@ main{
 
 .prj-boxs section:hover{
     background-color: aquamarine;
-
 }
+
+
+/* Responsiveness for the small prj boxes */
+
+@media  screen and (max-width:645px){
+    .total-box article:nth-child(3){
+        height: 25rem;
+    }
+}
+
 
 
 
