@@ -26,7 +26,7 @@ a{
 header{
     display:flex;
     /* background-color: blueviolet; */
-    border: 2px dotted blue;
+    /* border: 2px dotted blue; */
     background-image: url("./monkey\ temple\ triangles\ spots\ removed.jpg");
     background-size: cover;
 }
@@ -34,7 +34,7 @@ header{
     display: flex;
     flex-flow:row wrap;
     width: 100%;
-    border: 2px solid aquamarine;
+    /* border: 2px solid aquamarine; */
     justify-content: space-between;
 }
 .name{
@@ -50,7 +50,7 @@ header{
     background-color: var(--color-whiteish);
     border-radius: 10px;
     padding: .5rem;
-    font-size: 2rem;;
+    font-size: 2rem;
     
 }
 /* the links in the header to the sections of the page */
@@ -75,7 +75,7 @@ header{
     border-radius: 10px;
     color:black;
     padding:10px 10px 5px 10px;
-    margin: .5rem;
+    margin: .5rem .5rem 1.5rem .5rem;
 }
 
 
@@ -85,7 +85,7 @@ header{
 
 @media screen and (max-width: 645px ){
     header{
-        background-color: pink;
+        /* background-color: pink; */
         height: fit-content;
         width: 100vw;
        
@@ -104,7 +104,7 @@ header{
     }
 
     .name h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     
@@ -127,7 +127,7 @@ header{
     }
     .tiny a{
         font-size: 2rem;
-        margin: .5rem;
+        margin: .5rem .5rem 1.5rem .5rem;
     }
     
 }
@@ -141,14 +141,15 @@ main{
 .total-box{
     display: flex;
     flex-flow:column nowrap;
-    border: 2px solid limegreen;
+    /* border: 2px solid limegreen; */
     flex: 1;
 }
 
 .total-box article{
     display: flex;
     flex-flow:row wrap;
-    border: 2px solid darkgoldenrod;
+    padding-bottom: 3rem;
+    /* border: 2px solid darkgoldenrod; */
     /* margin: 1% 0% 2% 0%; */
     
 }
@@ -183,6 +184,10 @@ main{
     /* padding: 5rem; */
 }
 
+.bio img{
+    border-radius: 20px;
+}
+
 .bio h2{
     display: flex;
     flex-flow: row wrap;
@@ -190,6 +195,8 @@ main{
 
     background-color: var(--color-whiteish);
     border-radius: 10px;
+
+    font-size: 2rem;
 }
 
 #me{
@@ -200,7 +207,6 @@ main{
     padding: 10px;
     height: 2rem;
     width: 6rem;
-    margin-left: 1rem;
 }
 #aboutMe{
     display: flex;
@@ -234,6 +240,12 @@ main{
         align-items: center;
         justify-content: center;
         
+    }
+    #me{
+        margin-bottom:.5rem;
+    }
+    #aboutMe{
+        margin-top:.5rem;
     }
 
 
@@ -305,6 +317,10 @@ main{
     margin: 1% 50% 1% 50%;
 }
 
+.box1 img{
+    border-radius: 20px;
+}
+
 .box1 section{
     display:flex;
     flex-flow:column nowrap;
@@ -313,8 +329,22 @@ main{
 }
 
 .box1 h3{
+    font-size: 2rem;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-whiteish);
+    padding:.4rem;
+    border-radius: 20px;
+    margin-bottom:.4rem;
+}
+.box1 p{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-whiteish);
+    border-radius: 20px;
+    padding: .4rem;
 }
 
 .main-proj-box section{
@@ -323,7 +353,7 @@ main{
     margin: 1rem;
     align-items: center;
     justify-content: flex-start;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 
@@ -360,7 +390,7 @@ main{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     width:50%;
     padding: 15px;
     flex: 1;
@@ -374,10 +404,12 @@ main{
     flex-flow: row wrap;
     width: 7vh; 
     height: 7vh;
-    border: 2px solid violet;
+    background-color: var(--color-whiteish);
+    border-radius: 20px;
     padding: 10px;
     margin: 1.75%;
     flex: 1 1 40%;
+  
 }
 
 #prj-2,
@@ -385,14 +417,25 @@ main{
 #prj-4,
 #prj-5{
     height: 3rem;
+
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
 }
+
+
+
 
 
 /* the different interactions with the small project boxes */
 
 .prj-boxs section:hover{
-    background-color: aquamarine;
+    background-color: var(--color-blackish);
+    color: var(--color-whiteish);
 }
+
 
 
 /* Responsiveness for the small prj boxes */
@@ -410,17 +453,33 @@ main{
 
 footer{
     display:flex;
-    position: relative;
-    right: 0px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
     border: 2px solid magenta;
 }
-
+footer nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid blue;
+    padding: 0 6rem 0 6rem;
+}
 
 .contact a{
     display:flex;
     flex-flow:row wrap;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    
 
 }
 
