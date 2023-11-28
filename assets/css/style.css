@@ -148,7 +148,7 @@ main{
 .total-box article{
     display: flex;
     flex-flow:row wrap;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     /* border: 2px solid darkgoldenrod; */
     /* margin: 1% 0% 2% 0%; */
     
@@ -425,6 +425,10 @@ main{
 
 }
 
+.prj-boxs h4{
+    font-size: 1.5rem;
+}
+
 
 
 
@@ -457,7 +461,9 @@ footer{
     justify-content: center;
     align-items: center;
     height: 5rem;
-    border: 2px solid magenta;
+    /* border: 2px solid magenta; */
+    background-color:var(--color-dark-blue-black);
+    padding-bottom: 2rem;
 }
 footer nav{
     display: flex;
@@ -470,7 +476,7 @@ footer nav{
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     padding: 0 6rem 0 6rem;
 }
 
@@ -479,6 +485,11 @@ footer nav{
     flex-flow:row wrap;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
+    background-color: var(--color-whiteish);
+    padding: .5rem;
+    border-radius: 20px;
+    
     
 
 }
