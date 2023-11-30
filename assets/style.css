@@ -19,6 +19,7 @@ header{
     text-decoration: none;
     color:black;
     font-size: 2rem;
+
 }
 
 .two-boxes{
@@ -27,6 +28,9 @@ header{
     display:flex;
     flex-flow: row nowrap;
 }
+
+
+/* ---------------the bio section------------- */
 
 .aboutMe{
     border: 2px solid blue;
@@ -37,6 +41,13 @@ header{
     border-right: 3px solid goldenrod;
 
     margin: 0 0 2rem 0;
+}
+
+.bio-head{
+    margin: 1rem 0 0 0;
+}
+.bio-head h2{
+    font-size: 4rem;
 }
 
 .avatar{
@@ -52,16 +63,14 @@ header{
 .bio{
     border: 2px solid salmon;
     margin: 2rem;
-
-
 }
-.bio-head{
-    margin: 1rem 0 0 0;
-}
-.bio-head h2{
-    font-size: 3rem;
+.bio p{
+    font-size: 1.5rem;
 }
 
+/* ---------------the bio section END------------- */
+
+/* ----------the tablet that contains all the projects---------- */
 .tablet{
     border: 1rem solid gray;
     border-radius: 1rem;
@@ -73,6 +82,12 @@ header{
 
     background-color: lightgreen;
 }
+
+/* ----------the tablet that contains all the projects END---------- */
+
+
+
+/* ------------------big project-------------------- */
 .main-head{
     display:flex;
     flex-flow: column nowrap;
@@ -102,6 +117,12 @@ header{
     width: 100%;
 }
 
+/* ------------------big project END-------------------- */
+
+
+
+/* ------------------small projects-------------------- */
+
 .apps nav{
     display:flex;
 }
@@ -120,10 +141,7 @@ header{
     border-radius: 3rem;
 }
 
-/* .side-projects nav{
-    height: 25%;
-    width: 25%;
-} */
+
 
 .side-projects div{
     display:flex;
@@ -157,9 +175,37 @@ header{
 .side-head a{
     margin-bottom: 2rem;
 }
+/* ------------------small prjs END-------------------- */
 
 
-@media  screen and (max-width:1782px){
+/* ------------------footer-------------------- */
+
+footer{
+    display:flex;
+    
+    height: 5rem;
+    
+}
+.contact-me{
+    width:100%;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contact-me img{
+    margin: 2rem 2rem 2rem 2rem;
+
+    height: 5rem;
+    width:9rem;
+}
+
+/* ------------------footer END-------------------- */
+
+
+/* ------------------responsive-------------------- */
+
+@media  screen and (max-width:890px){
     .two-boxes{
         flex-flow: column nowrap;
     }
@@ -170,3 +216,8 @@ header{
         align-items: flex-start;
     }
 }
+
+/* ------------------responsive END-------------------- */
+
+
+
