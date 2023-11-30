@@ -1,5 +1,15 @@
+
+:root{
+    --color-tablet-bkg:rgb(237, 175, 184);
+    --color-bio-bkg:rgb(247, 225, 215);
+    --color-apps-bkg:rgb(176, 196, 177);
+    --color-header-footer-bkg:rgb(222, 219, 210);
+    --color-dark-green:rgb(74, 87,89);
+
+}
 *{
     margin:0;
+    font-family: sans-serif;
 }
 
 header{
@@ -8,6 +18,8 @@ header{
     justify-content: center;
     align-items: center;
     height:15rem;
+
+    background-color: var(--color-header-footer-bkg);
 }
 
 .header-name h1{
@@ -23,24 +35,28 @@ header{
 }
 
 .two-boxes{
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
     display:flex;
     flex-flow: row nowrap;
+    background-color: var(--color-apps-bkg);
+
+    padding: 2rem 0 0 0;
 }
 
 
 /* ---------------the bio section------------- */
 
 .aboutMe{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
-    border-right: 3px solid goldenrod;
+    border-right: 5px solid var(--color-dark-green);
 
     margin: 0 0 2rem 0;
+    background-color: var(--color-bio-bkg);
 }
 
 .bio-head{
@@ -61,8 +77,12 @@ header{
 }
 
 .bio{
-    border: 2px solid salmon;
+    /* border: 2px solid salmon; */
     margin: 2rem;
+    padding: 1rem 0 1rem 0;
+    border-top: 5px solid var(--color-dark-green);
+    border-bottom: 5px solid var(--color-dark-green);
+
 }
 .bio p{
     font-size: 1.5rem;
@@ -80,7 +100,7 @@ header{
     display:flex;
     flex-flow: column wrap;
 
-    background-color: lightgreen;
+    background-color: var(--color-tablet-bkg);
 }
 
 /* ----------the tablet that contains all the projects END---------- */
@@ -166,10 +186,9 @@ header{
 
     width: 5rem;
 
-    background-color: rgb(236, 177, 118);
+    background-color: rgb(236, 177, 118, 0.9);
     padding: .2rem;
     border-radius: .9rem;
-    
 
 }
 .side-head a{
@@ -182,25 +201,76 @@ header{
 
 footer{
     display:flex;
-    
-    height: 5rem;
+    height: 100%;
+
+    background-color: var(--color-header-footer-bkg);
     
 }
+
 .contact-me{
     width:100%;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.contact-me h4{
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+
+    position: relative;
+    left: .5rem;
+    margin: .5rem 0 0 0;
 }
 .contact-me img{
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 0rem 2rem 2rem 2rem;
 
     height: 5rem;
     width:9rem;
 }
 
 /* ------------------footer END-------------------- */
+
+/* ---------------interactions---------------------- */
+
+.header-nav a:hover{
+    border-bottom: .2rem solid var(--color-dark-green);
+}
+
+
+#big-pic,
+#prj1,
+#prj2,
+#prj3,
+#prj4{
+    transition: transform 0.3s;
+    transition-delay: .0s, 0.7s;
+}
+#big-pic:hover{
+    transform: translate(0, -4rem);
+}
+
+#prj1:hover{
+    transform: translate(0, -4rem) rotate(15deg);
+}
+#prj2:hover{
+    transform: translate(0, -4rem) rotate(15deg);
+}
+#prj3:hover{
+    transform: translate(0, -4rem) rotate(15deg);
+}
+#prj4:hover{
+    transform: translate(0, -4rem) rotate(15deg);
+}
+
+
+
+/* ---------------interactions END---------------------- */
 
 
 /* ------------------responsive-------------------- */
@@ -215,7 +285,11 @@ footer{
         justify-content: center;
         align-items: flex-start;
     }
+    .aboutMe{
+        border-right:none;
+    }
 }
+
 
 /* ------------------responsive END-------------------- */
 
