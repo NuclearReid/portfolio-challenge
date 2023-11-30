@@ -1,4 +1,4 @@
-
+/* --------global-------- */
 :root{
     --color-tablet-bkg:rgb(237, 175, 184);
     --color-bio-bkg:rgb(247, 225, 215);
@@ -11,7 +11,9 @@
     margin:0;
     font-family: sans-serif;
 }
+/* --------global END-------- */
 
+/* --------header-------- */
 header{
     display:flex;
     flex-flow:column nowrap;
@@ -34,9 +36,11 @@ header{
 
 }
 
-.two-boxes{
-    /* border: 2px solid red; */
+/* --------header END-------- */
 
+
+/* ------the two boxes that make up the bio & proj sections------ */
+.two-boxes{
     display:flex;
     flex-flow: row nowrap;
     background-color: var(--color-apps-bkg);
@@ -48,7 +52,6 @@ header{
 /* ---------------the bio section------------- */
 
 .aboutMe{
-    /* border: 2px solid blue; */
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -67,7 +70,6 @@ header{
 }
 
 .avatar{
-    /* border: 2px solid green; */
     margin: 2rem 0 2rem 0;
     
 
@@ -77,7 +79,6 @@ header{
 }
 
 .bio{
-    /* border: 2px solid salmon; */
     margin: 2rem;
     padding: 1rem 0 1rem 0;
     border-top: 5px solid var(--color-dark-green);
@@ -90,7 +91,8 @@ header{
 
 /* ---------------the bio section END------------- */
 
-/* ----------the tablet that contains all the projects---------- */
+
+/* ----------the designing of the tablet that contains all the projects---------- */
 .tablet{
     border: 1rem solid gray;
     border-radius: 1rem;
@@ -155,12 +157,10 @@ header{
     justify-content: center;
     margin: .1rem;
 
-    /* flex: 1 1 45%; */
 }
 .side-projects img{
     border-radius: 3rem;
 }
-
 
 
 .side-projects div{
@@ -236,6 +236,7 @@ footer{
 
 /* ------------------footer END-------------------- */
 
+
 /* ---------------interactions---------------------- */
 
 .header-nav a:hover{
@@ -271,6 +272,7 @@ footer{
 
 
 /* ---------------interactions END---------------------- */
+
 
 
 /* ------------------responsive-------------------- */
