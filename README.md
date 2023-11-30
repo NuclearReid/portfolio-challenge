@@ -18,7 +18,7 @@ My portfolio when the screen is smaller
 ![top half of my portfolio responsive](./imgs/portfolio%20top%20half%20responsive.png)
 ![bottom half of my portfolio responsive](./imgs/portfolio%20bottom%20half%20responsive.png)
 
-
+(These images are a little out of date. I have updated the code to have the little projects be titled Project 2-5)
 
 #### Graphics used
 
